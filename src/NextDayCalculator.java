@@ -18,7 +18,7 @@ public class NextDayCalculator {
             case 6:
             case 9:
             case 11:
-                lastOfMonth= 31;
+                lastOfMonth= 30;
                 break;
             case 2:
                 lastOfMonth= 28;
