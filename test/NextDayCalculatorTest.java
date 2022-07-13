@@ -45,4 +45,14 @@ public void testDay1Month1Year2018(){
         String result= NextDayCalculator.displayNextDay(dayTest,monthTest,yearTest);
         assertEquals(expect,result);
     }
+    @Test
+    @DisplayName("case 30/4/2018")
+    public void testDay29Month2Year2020(){
+        int dayTest=29;
+        int monthTest=2;
+        int yearTest= 2020;
+        String expect= "1/3/2020";
+        String result= NextDayCalculator.displayNextDay(dayTest,monthTest,yearTest);
+        assertEquals(expect,result);
+    }
 }
