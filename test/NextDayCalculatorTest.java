@@ -36,7 +36,7 @@ public void testDay1Month1Year2018(){
         assertEquals(expect,result);
     }
     @Test
-    @DisplayName("case 30/4/2018")
+    @DisplayName("case 28/2/2018")
     public void testDay28Month2Year2018(){
         int dayTest=28;
         int monthTest=2;
@@ -46,7 +46,7 @@ public void testDay1Month1Year2018(){
         assertEquals(expect,result);
     }
     @Test
-    @DisplayName("case 30/4/2018")
+    @DisplayName("case 29/2/2020")
     public void testDay29Month2Year2020(){
         int dayTest=29;
         int monthTest=2;
