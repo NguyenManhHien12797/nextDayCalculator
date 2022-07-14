@@ -1,7 +1,9 @@
 public class NextDayCalculator {
    public static final String CONCAT= "/";
-   public static final int STARTOFMONTH= 1;
-   public static boolean isLeapYear(int yearTest){
+    public static final int STARTOFMONTH= 1;
+    public static final int STARTOFYEAR = 1;
+
+    public static boolean isLeapYear(int yearTest){
        boolean isLeapYear= false;
        boolean isDivisibleBy4= yearTest%4 ==0;
        if(isDivisibleBy4) {
@@ -67,13 +69,28 @@ public class NextDayCalculator {
                     lastOfMonth= 31;
             }
         }
-        if(dayTest == lastOfMonth){
-            day = STARTOFMONTH;
-            monthTest++;
+        int lastOfYear = 12;
+        if(monthTest==lastOfYear){
+            if(dayTest == lastOfMonth){
+                day = STARTOFMONTH;
+                monthTest++;
+                monthTest= STARTOFYEAR;
+                yearTest++;
+            }
+            else{
+                day= dayTest+1;
+            }
+
+        } else {
+            if(dayTest == lastOfMonth){
+                day = STARTOFMONTH;
+                monthTest++;
+            }
+            else{
+                day= dayTest+1;
+            }
         }
-        else{
-            day= dayTest+1;
-        }
+
         String result= day+ CONCAT+ monthTest+ CONCAT+ yearTest;
         return result;
     }
